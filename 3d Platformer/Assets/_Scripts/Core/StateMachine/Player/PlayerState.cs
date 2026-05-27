@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PlayerState : State<PlayerStateMachine.EPlayerState>
 {
 
@@ -12,7 +14,7 @@ public class PlayerState : State<PlayerStateMachine.EPlayerState>
     public override void EnterState()
     {
         base.EnterState();
-        //Anim.SetBool(StateKey.ToString(), true);
+        player.Animator.SetBool(StateKey.ToString(), true);
     }
 
     public override void UpdateState()
@@ -28,7 +30,7 @@ public class PlayerState : State<PlayerStateMachine.EPlayerState>
     public override void ExitState()
     {
         base.ExitState();
-        //Anim.SetBool(StateKey.ToString(), false);
+        player.Animator.SetBool(StateKey.ToString(), false);
     }
 
 

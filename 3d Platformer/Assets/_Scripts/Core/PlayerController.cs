@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Transform cam;
     private Animator anim;
     
+    public Animator Animator => anim;
+    
     private PlayerStateMachine stateMachine;
 
     [SerializeField] private float jumpForce;
@@ -18,9 +20,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         stateMachine = GetComponent<PlayerStateMachine>();
-        anim = new Animator();
+        anim = GetComponent<Animator>();
         
-        stateMachine.Initialize(this, rb);
+        stateMachine.Initialize(this);
         
         cam = Camera.main.transform;
     }

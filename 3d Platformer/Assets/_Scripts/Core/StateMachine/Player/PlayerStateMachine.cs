@@ -10,7 +10,7 @@ public class PlayerStateMachine : StateMachine<PlayerStateMachine.EPlayerState>
         Fall
     }
 
-    public void Initialize(PlayerController player, Rigidbody rb)
+    public void Initialize(PlayerController player)
     {
         States.Add(EPlayerState.Idle, new IdleState(EPlayerState.Idle, player));
         States.Add(EPlayerState.Move, new MoveState(EPlayerState.Move, player));

@@ -9,8 +9,6 @@ public abstract class State<EState> where EState : Enum
     }
     
     public EState StateKey { get; private set; }
-    public Rigidbody RB { get; private set; }
-    //public Animator Anim { get; private set; }
 
     protected float stateTimer;
     protected bool animEnded;
